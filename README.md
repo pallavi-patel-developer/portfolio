@@ -27,7 +27,7 @@
 
 </div>
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
@@ -39,13 +39,13 @@
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-> 🔗 **[View Live Portfolio →](#)** *(Update with your deployed URL)*
+> 🔗 **[View Live Portfolio →](#)** *https://portfolio-three-taupe-53.vercel.app/*
 
 ---
 
-## ✨ Features
+##  Features
 
 | Section | Highlights |
 |---------|-----------|
@@ -59,7 +59,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 <div align="center">
 
@@ -76,7 +76,7 @@
 
 ---
 
-## 🏁 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -108,40 +108,10 @@ npm run build
 npm start
 ```
 
----
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── public/                     # Static assets (images, icons, CV)
-│   ├── person.png              # Hero profile image
-│   ├── projects/               # Project screenshot images
-│   └── ...
-├── src/
-│   ├── app/
-│   │   ├── globals.css         # Global styles & CSS animations
-│   │   ├── layout.js           # Root layout with fonts
-│   │   ├── page.js             # Main landing page (assembles all sections)
-│   │   └── read-more/
-│   │       └── page.js         # Read More about page
-│   └── components/
-│       ├── Navbar.jsx           # Navigation bar with anchor links
-│       ├── Hero.jsx             # Hero section with floating tech logos
-│       ├── About.jsx            # About Me section
-│       ├── Experience.jsx       # Timeline-based experience section
-│       ├── Skills.jsx           # Skills grid with progress bars
-│       ├── Projects.jsx         # Filterable project cards
-│       ├── Contact.jsx          # Contact form & social links
-│       └── readMore.jsx         # Read More content component
-├── package.json
-├── tailwind.config.js
-└── README.md
-```
 
 ---
 
-## 🎨 Design System
+##  Design System
 
 | Token | Value | Usage |
 |-------|-------|-------|
@@ -152,65 +122,19 @@ portfolio/
 
 ---
 
-## 🖼️ Adding Project Images
 
-To display real screenshots in your project cards:
 
-1. Create a `projects/` folder inside `public/`
-2. Add images named:
-   - `ecommerce.png`
-   - `chatapp.png`  
-   - `taskboard.png`
-   - `auth.png`
-   - `blogcms.png`
-   - `devops.png`
-3. The gradient fallbacks will be replaced by your actual images automatically
 
----
-
-## 📄 Customization
-
-### Update Your Info
-- **Name & Title** → `Hero.jsx` and `Navbar.jsx`
-- **About Me text** → `About.jsx`
-- **Experience entries** → `Experience.jsx` (edit the `experiences` array)
-- **Skills & proficiency** → `Skills.jsx` (edit the `skills` array)
-- **Projects** → `Projects.jsx` (edit the `projects` array)
-- **Contact info** → `Contact.jsx` (email, location, social links)
-- **GitHub & LinkedIn URLs** → `Hero.jsx` (update `href` values)
-- **CV/Resume** → Place your `cv.pdf` in the `public/` folder
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📬 Contact
+##  Contact
 
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-pallavi--patel--developer-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pallavi-patel-developer)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Pallavi_Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
-[![Email](https://img.shields.io/badge/Email-pallavi.patel@example.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pallavi.patel@example.com)
+[![Email](https://img.shields.io/badge/Email-pallavipatel8080@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pallavipatel8080@gmail.com)
 
 </div>
 
----
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 <div align="center">
 
