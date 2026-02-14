@@ -130,7 +130,7 @@ npm start
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-pallavi--patel--developer-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pallavi-patel-developer)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Pallavi_Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Pallavi_Patel-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pallavi-patel-48443a2b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 [![Email](https://img.shields.io/badge/Email-pallavipatel8080@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pallavipatel8080@gmail.com)
 
 </div>
