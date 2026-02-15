@@ -5,16 +5,49 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [focused, setFocused] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const WEB3FORMS_KEY = process.env.API_KEY;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        setError('Something went wrong. Please try again.');
+        setTimeout(() => setError(''), 4000);
+      }
+    } catch {
+      setError('Network error. Please check your connection.');
+      setTimeout(() => setError(''), 4000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -162,12 +195,26 @@ export default function Contact() {
             />
           </div>
 
+          {/* Error message */}
+          {error && (
+            <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="15" x2="9" y1="9" y2="15" /><line x1="9" x2="15" y1="9" y2="15" /></svg>
+              {error}
+            </div>
+          )}
+
           <button
             type="submit"
-            className={`group relative w-full py-4 rounded-xl font-semibold text-white overflow-hidden transition-all duration-500 ${submitted ? 'bg-green-500 shadow-[0_0_25px_rgba(34,197,94,0.4)]' : 'bg-accent shadow-[0_0_20px_rgba(0,191,165,0.2)] hover:shadow-[0_0_30px_rgba(0,191,165,0.4)] hover:scale-[1.02]'}`}
+            disabled={loading}
+            className={`group relative w-full py-4 rounded-xl font-semibold text-white overflow-hidden transition-all duration-500 disabled:opacity-70 disabled:cursor-not-allowed ${submitted ? 'bg-green-500 shadow-[0_0_25px_rgba(34,197,94,0.4)]' : 'bg-accent shadow-[0_0_20px_rgba(0,191,165,0.2)] hover:shadow-[0_0_30px_rgba(0,191,165,0.4)] hover:scale-[1.02]'}`}
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              {submitted ? (
+              {loading ? (
+                <>
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>
+                  Sending...
+                </>
+              ) : submitted ? (
                 <>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   Message Sent!
