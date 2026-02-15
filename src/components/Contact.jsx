@@ -8,7 +8,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+  const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_PAP;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
