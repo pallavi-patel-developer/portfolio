@@ -40,7 +40,7 @@ const floatingIcons = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative px-6 md:px-12 py-24 max-w-7xl mx-auto overflow-hidden">
+    <section id="experience" className="relative px-4 sm:px-6 md:px-12 py-16 sm:py-20 md:py-24 max-w-7xl mx-auto overflow-hidden">
 
       {/* Floating background icons */}
       {floatingIcons.map((icon, i) => (
@@ -63,14 +63,14 @@ export default function Experience() {
           }}
         />
       ))}
-      <h2 className="text-5xl font-bold text-center mb-4">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
         My <span className="text-accent">Experience</span>
       </h2>
-      <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+      <p className="text-gray-400 text-center mb-10 sm:mb-16 max-w-2xl mx-auto text-sm sm:text-base">
         A journey through my professional career and the milestones I have achieved.
       </p>
 
-      <div className="flex flex-col gap-10 max-w-5xl mx-auto">
+      <div className="flex flex-col gap-8 sm:gap-10 max-w-5xl mx-auto">
         {experiences.map((exp, idx) => (
           <div
             key={idx}
@@ -90,17 +90,17 @@ export default function Experience() {
               <div className="flex flex-col md:flex-row">
                 {/* Image */}
                 {exp.image && (
-                  <div className="md:w-[340px] flex-shrink-0 overflow-hidden">
+                  <div className="md:w-[340px] flex-shrink-0 overflow-hidden p-3 sm:p-5">
                     <img
                       src={exp.image}
                       alt={`${exp.company} work`}
-                      className="ml-5 mb-5 mt-5  w-80 h-80 border-none rounded-4xl"
+                      className="w-full h-auto sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl sm:rounded-4xl object-cover mx-auto"
                     />
                   </div>
                 )}
 
                 {/* Details */}
-                <div className="flex-1 ml-10 p-6 md:p-3">
+                <div className="flex-1 p-4 sm:p-6 md:p-3">
 
                   <span
                     className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full mb-4"

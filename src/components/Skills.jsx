@@ -105,11 +105,11 @@ function SkillBar({ skill, index }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 md:px-12 py-24 max-w-7xl mx-auto">
-      <h2 className="text-5xl font-bold text-center mb-4">
+    <section id="skills" className="px-4 sm:px-6 md:px-12 py-16 sm:py-20 md:py-24 max-w-7xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
         My <span className="text-accent">Skills</span>
       </h2>
-      <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+      <p className="text-gray-400 text-center mb-10 sm:mb-16 max-w-2xl mx-auto text-sm sm:text-base">
         Technologies and tools I work with to bring ideas to life.
       </p>
 

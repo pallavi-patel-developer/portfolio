@@ -81,16 +81,16 @@ export default function Projects() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" className="px-6 md:px-12 py-24 max-w-7xl mx-auto">
-      <h2 className="text-5xl font-bold text-center mb-4">
+    <section id="projects" className="px-4 sm:px-6 md:px-12 py-16 sm:py-20 md:py-24 max-w-7xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
         My <span className="text-accent">Projects</span>
       </h2>
-      <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
+      <p className="text-gray-400 text-center mb-8 sm:mb-10 max-w-2xl mx-auto text-sm sm:text-base">
         A selection of projects that showcase my skills and passion for building.
       </p>
 
       {/* Category filter */}
-      <div className="flex justify-center gap-3 mb-14">
+      <div className="flex justify-center gap-2 sm:gap-3 mb-10 sm:mb-14 flex-wrap">
         {categories.map(cat => (
           <button
             key={cat}
