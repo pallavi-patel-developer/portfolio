@@ -141,7 +141,7 @@ const FloatingIcon = ({ Icon, size, top, left, right, bottom, rotate, opacity = 
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-12 py-20 max-w-7xl mx-auto min-h-[80vh] overflow-hidden">
+    <section className="relative flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto min-h-[60vh] md:min-h-[80vh] overflow-hidden">
 
       {/* ── Floating Tech Logos ── */}
       <FloatingIcon Icon={HtmlIcon} size={48} top="5%" left="3%" rotate={-15} delay={0} />
@@ -162,11 +162,11 @@ export default function Hero() {
       <FloatingIcon Icon={NpmIcon} size={34} top="70%" right="35%" rotate={-5} delay={0.4} />
 
       {/* ── Hero Content ── */}
-      <div className="md:w-1/2 space-y-6 relative z-10">
-        <h1 className="text-6xl md:text-7xl font-bold leading-tight">BACKEND  <br />
+      <div className="w-full md:w-1/2 space-y-5 sm:space-y-6 relative z-10 text-center md:text-left">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">BACKEND  <br />
           <span className="text-accent">DEVELOPER</span>
         </h1>
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-3 sm:gap-5 items-center justify-center md:justify-start flex-wrap">
           {/* GitHub */}
           <a href="https://github.com" target="_blank" rel="noopener noreferrer"
             className="group w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-accent hover:border-accent hover:shadow-[0_0_20px_rgba(0,191,165,0.4)]">
@@ -187,7 +187,7 @@ export default function Hero() {
 
           {/* Download CV */}
           <Link href="/cv.pdf"
-            className="group flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-medium shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,165,0.5)] hover:brightness-110">
+            className="group flex items-center gap-2 bg-accent text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,165,0.5)] hover:brightness-110">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-y-0.5">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
@@ -199,8 +199,8 @@ export default function Hero() {
       </div>
 
       {/* ── Hero Image ── */}
-      <div className="md:w-1/2 mt-12 md:mt-0 relative z-10">
-        <div className="w-full h-96 bg-gray-800/50 rounded-2xl border-2 border-dashed border-gray-700 flex items-center justify-center text-gray-500 relative overflow-hidden">
+      <div className="w-full md:w-1/2 mt-10 md:mt-0 relative z-10">
+        <div className="w-full h-64 sm:h-80 md:h-96 bg-gray-800/50 rounded-2xl border-2 border-dashed border-gray-700 flex items-center justify-center text-gray-500 relative overflow-hidden">
           <img src="/person.png" alt="hero" className='w-full h-full object-cover' />
         </div>
       </div>
