@@ -14,14 +14,6 @@
   Featuring smooth animations, floating tech logos, animated progress bars, and a sleek dark theme with teal accents.
 </p>
 
-<p align="center">
-  <a href="#-live-demo">Live Demo</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-project-structure">Project Structure</a> •
-  <a href="#-contact">Contact</a>
-</p>
 
 ---
 
