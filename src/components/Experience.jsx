@@ -1,40 +1,35 @@
 'use client';
-import { useState } from 'react';
 
 const experiences = [
   {
-    year: '2024 - Present',
-    role: 'Senior Backend Developer',
-    company: 'Tech Corp',
-    description: 'Leading backend architecture and microservices development using Node.js, Express, and MongoDB. Designing scalable APIs serving 100K+ daily requests.',
-    tech: ['Node.js', 'MongoDB', 'Docker', 'AWS'],
-  },
-  {
-    year: '2023 - 2024',
-    role: 'Full Stack Developer',
-    company: 'Digital Solutions',
-    description: 'Built and maintained full-stack applications with React and Node.js. Implemented CI/CD pipelines and improved deployment efficiency by 40%.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Git'],
-  },
-  {
-    year: '2022 - 2023',
+    year: 'Sep 2025 - Present',
     role: 'Backend Developer',
-    company: 'StartUp Inc.',
-    description: 'Developed RESTful APIs and database schemas. Integrated third-party services and payment gateways for e-commerce platform.',
-    tech: ['Express', 'MySQL', 'Redis', 'Stripe'],
+    company: 'Vedseem Technologies',
+    description: [
+      'Designing and developing scalable backend architectures and RESTful APIs using Node.js, Express, and MongoDB.',
+      'Building and maintaining microservices for high-traffic production applications.',
+      'Collaborating with cross-functional teams to deliver end-to-end features on schedule.',
+      'Implementing authentication, authorization, and security best practices across services.',
+    ],
+    tech: ['Node.js', 'Express', 'MongoDB', 'REST APIs', 'Git'],
+    image: '/Screenshot 2026-02-14 020043.png',
   },
   {
-    year: '2021 - 2022',
-    role: 'Junior Developer',
-    company: 'WebDev Agency',
-    description: 'Started career building responsive websites and learning backend development. Contributed to 10+ client projects.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Python'],
-  },
+    year: 'Aug 2025 - Sep 2025',
+    role: 'Backend Developer Intern',
+    company: 'Vedseem Technologies',
+    description: [
+      'Designing and developing scalable backend architectures and RESTful APIs using Node.js, Express, and MongoDB.',
+      'Building and maintaining microservices for high-traffic production applications.',
+      'Collaborating with cross-functional teams to deliver end-to-end features on schedule.',
+      'Implementing authentication, authorization, and security best practices across services.',
+    ],
+    tech: ['Node.js', 'Express', 'MongoDB', 'REST APIs', 'Git'],
+    image: '/Screenshot 2026-02-14 020019.png',
+  }
 ];
 
 export default function Experience() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   return (
     <section id="experience" className="px-6 md:px-12 py-24 max-w-7xl mx-auto">
       <h2 className="text-5xl font-bold text-center mb-4">
@@ -44,45 +39,79 @@ export default function Experience() {
         A journey through my professional career and the milestones I have achieved.
       </p>
 
-      <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent/50 to-transparent md:-translate-x-1/2"></div>
-
-        {experiences.map((exp, index) => (
+      <div className="flex flex-col gap-10 max-w-5xl mx-auto">
+        {experiences.map((exp, idx) => (
           <div
-            key={index}
-            className={`relative flex flex-col md:flex-row items-start mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+            key={idx}
+            className="relative group"
           >
-            {/* Timeline dot */}
-            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 z-10">
-              <div className={`w-4 h-4 rounded-full border-2 transition-all duration-500 ${hoveredIndex === index ? 'bg-accent border-accent shadow-[0_0_15px_rgba(0,191,165,0.6)] scale-150' : 'bg-gray-900 border-accent/50'}`}></div>
-            </div>
 
-            {/* Year badge */}
-            <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12 md:text-right'} pl-8`}>
-              <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-500 ${hoveredIndex === index ? 'bg-accent text-white shadow-[0_0_20px_rgba(0,191,165,0.3)]' : 'bg-accent/10 text-accent'}`}>
-                {exp.year}
-              </span>
-            </div>
 
-            {/* Content card */}
-            <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'} pl-8 mt-4 md:mt-0`}>
-              <div className={`p-6 rounded-2xl border transition-all duration-500 cursor-default ${hoveredIndex === index ? 'bg-gray-800/80 border-accent/40 shadow-[0_8px_32px_rgba(0,191,165,0.15)] -translate-y-1' : 'bg-gray-800/30 border-gray-700/50'}`}>
-                <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
-                <p className="text-accent font-medium mb-3">{exp.company}</p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{exp.description}</p>
-                <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
-                  {exp.tech.map((t, i) => (
-                    <span
-                      key={i}
-                      className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-300 ${hoveredIndex === index ? 'bg-accent/20 text-accent' : 'bg-gray-700/50 text-gray-400'}`}
-                      style={{ transitionDelay: `${i * 50}ms` }}
-                    >
-                      {t}
-                    </span>
-                  ))}
+            {/* Card */}
+            <div
+              className="md:ml-6 border-dashed border-1 border-accent rounded-2xl overflow-hidden transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(30,32,41,0.95) 0%, rgba(40,44,60,0.9) 100%)',
+                boxShadow: '0 8px 32px rgba(0,191,165,0.08), 0 2px 8px rgba(0,0,0,0.3)',
+              }}
+            >
+              {/* Top section — image + details side by side */}
+              <div className="flex flex-col md:flex-row">
+                {/* Image */}
+                {exp.image && (
+                  <div className="md:w-[340px] flex-shrink-0 overflow-hidden">
+                    <img
+                      src={exp.image}
+                      alt={`${exp.company} work`}
+                      className="ml-5 mb-5 mt-5  w-80 h-80 border-none rounded-4xl"
+                    />
+                  </div>
+                )}
+
+                {/* Details */}
+                <div className="flex-1 ml-10 p-6 md:p-3">
+
+                  <span
+                    className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full mb-4"
+                    style={{
+                      background: 'rgba(0,191,165,0.15)',
+                      color: '#00bfa5',
+                      border: '1px solid rgba(0,191,165,0.25)',
+                    }}
+                  >
+                    {exp.year}
+                  </span>
+
+                  {/* Role & Company */}
+                  <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
+                  <p className="text-accent font-medium text-lg mb-5">{exp.company}</p>
+
+                  {/* Description bullets */}
+                  <ul className="space-y-2 mb-6">
+                    {exp.description.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-300 text-sm leading-relaxed">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-2">
+                    {exp.tech.map((t, i) => (
+                      <span
+                        key={i}
+                        className="text-xs font-medium px-3 py-1.5 rounded-lg transition-colors duration-200"
+                        style={{
+                          background: 'rgba(255,255,255,0.06)',
+                          color: '#a0aec0',
+                          border: '1px solid rgba(255,255,255,0.08)',
+                        }}
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
