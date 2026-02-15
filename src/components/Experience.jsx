@@ -29,9 +29,40 @@ const experiences = [
   }
 ];
 
+const floatingIcons = [
+  { src: '/api-icon-nobg.png', top: '5%', left: '3%', size: 55, delay: 0, rotate: -12 },
+  { src: '/cloud-icon-nobg.png', top: '12%', right: '5%', size: 60, delay: 1.2, rotate: 8 },
+  { src: '/database-icon-nobg.png', top: '45%', left: '1%', size: 50, delay: 0.6, rotate: 15 },
+  { src: '/lock-icon-nobg.png', top: '70%', right: '2%', size: 48, delay: 1.8, rotate: -10 },
+  { src: '/settings-icon-nobg.png', top: '85%', left: '6%', size: 52, delay: 2.4, rotate: 20 },
+  { src: '/terminal-icon-nobg.png', top: '35%', right: '3%', size: 55, delay: 0.3, rotate: -5 },
+];
+
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 md:px-12 py-24 max-w-7xl mx-auto">
+    <section id="experience" className="relative px-6 md:px-12 py-24 max-w-7xl mx-auto overflow-hidden">
+
+      {/* Floating background icons */}
+      {floatingIcons.map((icon, i) => (
+        <img
+          key={i}
+          src={icon.src}
+          alt=""
+          aria-hidden="true"
+          className="absolute pointer-events-none select-none hidden md:block"
+          style={{
+            top: icon.top,
+            left: icon.left,
+            right: icon.right,
+            width: icon.size,
+            height: icon.size,
+            opacity: 0.12,
+            transform: `rotate(${icon.rotate}deg)`,
+            animation: `floatIcon 3s ease-in-out ${icon.delay}s infinite alternate`,
+            zIndex: 0,
+          }}
+        />
+      ))}
       <h2 className="text-5xl font-bold text-center mb-4">
         My <span className="text-accent">Experience</span>
       </h2>
