@@ -81,9 +81,22 @@ export default function Projects() {
 
   return (
     <section id="projects" style={{ background: '#f7f5ee', padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .section-header {
+            flex-direction: column;
+            align-items: center !important;
+            text-align: center;
+          }
+          .section-header > div > div {
+            justify-content: center;
+          }
+        }
+      `}</style>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         {/* Header */}
         <div
+          className="section-header"
           style={{
             display: 'flex',
             justifyContent: 'space-between',

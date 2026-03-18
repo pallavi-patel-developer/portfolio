@@ -14,6 +14,18 @@ export default function About() {
         padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)',
       }}
     >
+      <style>{`
+        @media (max-width: 768px) {
+          .about-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .about-content p { margin-left: auto; margin-right: auto; }
+          .about-stats, .about-cv { justify-content: center; width: 100%; }
+        }
+      `}</style>
       <div
         style={{
           maxWidth: '1100px',
@@ -88,7 +100,7 @@ export default function About() {
         </div>
 
         {/* ── RIGHT: Text ── */}
-        <div style={{ flex: '1 1 min(100%, 320px)', color: '#fff' }}>
+        <div className="about-content" style={{ flex: '1 1 min(100%, 320px)', color: '#fff' }}>
           {/* Sub-label */}
           <div
             style={{
@@ -134,6 +146,7 @@ export default function About() {
 
           {/* Stats */}
           <div
+            className="about-stats"
             style={{
               display: 'flex',
               gap: '40px',
@@ -165,7 +178,7 @@ export default function About() {
           </div>
 
           {/* Download CV button */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div className="about-cv" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <Link
               href="/cv.pdf"
               style={{

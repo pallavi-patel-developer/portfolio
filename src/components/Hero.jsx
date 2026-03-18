@@ -137,21 +137,36 @@ export default function Hero() {
           color: #fff;
           transform: translateY(-2px);
         }
-        .hero-greeting-tag {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          border: 2px dashed #1a2e1a;
-          border-radius: 8px;
-          padding: 6px 16px;
-          font-size: 0.88rem;
-          font-weight: 600;
-          color: #1a2e1a;
-          background: transparent;
-          letter-spacing: 0.04em;
-          margin-bottom: 16px;
-        }
-      `}</style>
+          .hero-greeting-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px dashed #1a2e1a;
+            border-radius: 8px;
+            padding: 6px 16px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #1a2e1a;
+            background: transparent;
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+          }
+          @media (max-width: 768px) {
+            .hero-content {
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+            .hero-content p {
+              margin: 0 auto 36px;
+            }
+            .hero-cta, .hero-social {
+              justify-content: center;
+              width: 100%;
+            }
+          }
+        `}</style>
 
       {/* ── Hero Section (white/cream bg like reference) ── */}
       <section
@@ -176,7 +191,7 @@ export default function Hero() {
           }}
         >
           {/* ── LEFT CONTENT ── */}
-          <div style={{ flex: '1 1 420px', minWidth: 'min(100%, 280px)' }}>
+          <div className="hero-content" style={{ flex: '1 1 420px', minWidth: 'min(100%, 280px)' }}>
             {/* Greeting tag */}
             <div className="hero-greeting-tag">
               <span style={{ fontSize: '1rem' }}>👋</span>
@@ -218,7 +233,7 @@ export default function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <div className="hero-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
               <Link href="#projects" className="hero-btn-primary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polygon points="5 3 19 12 5 21 5 3" />
@@ -231,7 +246,7 @@ export default function Hero() {
             </div>
 
             {/* Social Row */}
-            <div style={{ display: 'flex', gap: '14px', marginTop: '32px', alignItems: 'center' }}>
+            <div className="hero-social" style={{ display: 'flex', gap: '14px', marginTop: '32px', alignItems: 'center' }}>
               {/* GitHub */}
               <a
                 href="https://github.com/pallavi-patel-developer"
