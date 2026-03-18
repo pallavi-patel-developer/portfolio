@@ -1,28 +1,214 @@
 import Link from 'next/link';
 
+const skillTags = [
+  'Node.js', 'REST APIs', 'MongoDB', 'Express',
+  'PostgreSQL', 'Docker', 'Git', 'Next.js',
+];
+
 export default function About() {
   return (
-    <section id="about" className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto min-h-0 md:min-h-[80vh]">
-      <div className="w-full md:w-1/2 relative order-2 md:order-1">
-        <div className="w-full h-64 sm:h-80 md:h-96 bg-gray-800/50 rounded-2xl border-2 border-dashed border-gray-700 flex items-center justify-center text-gray-500 relative overflow-hidden">
-          <img src="/person2.png" alt="" className="w-full h-full object-cover" />
-          <div className="absolute top-1/2 left-10 text-accent opacity-20 text-2xl sm:text-4xl">♪</div>
-          <div className="absolute bottom-20 right-20 text-accent opacity-20 text-2xl sm:text-4xl">?</div>
+    <section
+      id="about"
+      style={{
+        background: '#1a2e1a',
+        padding: '80px 32px',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: '1100px',
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '60px',
+          flexWrap: 'wrap',
+        }}
+      >
+        {/* ── LEFT: Photo + tags ── */}
+        <div
+          style={{
+            flex: '0 0 auto',
+            position: 'relative',
+            width: 'clamp(240px, 35vw, 360px)',
+          }}
+        >
+          {/* Yellow circle bg */}
+          <div
+            style={{
+              width: '80%',
+              aspectRatio: '1',
+              background: '#f5a623',
+              borderRadius: '50%',
+              margin: '0 auto',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <img
+              src="/person2.png"
+              alt="Pallavi Patel"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'top center',
+                borderRadius: '50%',
+              }}
+            />
+          </div>
+
+          {/* Floating skill tags */}
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '8px',
+              marginTop: '20px',
+              justifyContent: 'center',
+            }}
+          >
+            {skillTags.map((tag, i) => (
+              <span
+                key={i}
+                style={{
+                  background: i % 2 === 0 ? '#f5a623' : 'rgba(255,255,255,0.1)',
+                  color: i % 2 === 0 ? '#1a1a1a' : '#e8f5e0',
+                  borderRadius: '50px',
+                  padding: '5px 14px',
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  whiteSpace: 'nowrap',
+                  border: i % 2 === 0 ? 'none' : '1px solid rgba(255,255,255,0.15)',
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 order-1 md:order-2 md:pl-12 lg:pl-20 mb-8 md:mb-0">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          About <span className="text-accent">me</span>
-        </h2>
-        <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
-        </p>
-        <Link href="/read-more" className="text-white font-semibold flex items-center gap-2 hover:text-accent transition-colors">
-          Read more
-          <span className="text-xl">→</span>
-        </Link>
+        {/* ── RIGHT: Text ── */}
+        <div style={{ flex: '1 1 320px', color: '#fff' }}>
+          {/* Sub-label */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: '#f5a623',
+              fontSize: '0.88rem',
+              fontWeight: 600,
+              marginBottom: '12px',
+            }}
+          >
+            <span style={{ display: 'block', width: '28px', height: '2px', background: '#f5a623' }} />
+            About Me
+          </div>
 
+          <h2
+            style={{
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              fontWeight: 900,
+              lineHeight: 1.1,
+              marginBottom: '20px',
+            }}
+          >
+            Who is{' '}
+            <span style={{ color: '#f5a623', fontStyle: 'italic' }}>
+              Pallavi Patel?
+            </span>
+          </h2>
+
+          <p
+            style={{
+              color: 'rgba(255,255,255,0.7)',
+              lineHeight: 1.8,
+              marginBottom: '32px',
+              fontSize: '0.95rem',
+            }}
+          >
+            I&apos;m an experienced Backend Developer specializing in building scalable APIs,
+            robust server-side systems, and full-stack web applications. I love solving
+            complex problems and turning ideas into production-ready systems.
+          </p>
+
+          {/* Stats */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '40px',
+              marginBottom: '36px',
+              flexWrap: 'wrap',
+            }}
+          >
+            {[
+              { num: '10+', label: 'Projects Completed' },
+              { num: '2+', label: 'Years Experience' },
+              { num: '5+', label: 'Tech Stacks' },
+            ].map((stat, i) => (
+              <div key={i}>
+                <div
+                  style={{
+                    fontSize: '2rem',
+                    fontWeight: 900,
+                    color: '#f5a623',
+                    lineHeight: 1,
+                  }}
+                >
+                  {stat.num}
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.82rem', marginTop: '4px' }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Download CV button */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <Link
+              href="/cv.pdf"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0',
+                textDecoration: 'none',
+              }}
+            >
+              <span
+                style={{
+                  background: '#1a2e1a',
+                  color: '#fff',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                  borderRadius: '50px 0 0 50px',
+                  padding: '12px 22px',
+                  fontWeight: 700,
+                  fontSize: '0.88rem',
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Download CV
+              </span>
+              <span
+                style={{
+                  background: '#f5a623',
+                  color: '#1a1a1a',
+                  borderRadius: '50%',
+                  width: '46px',
+                  height: '46px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 900,
+                  fontSize: '1.1rem',
+                }}
+              >
+                →
+              </span>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

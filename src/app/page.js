@@ -1,23 +1,20 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-accent/5 blur-[120px] -z-10"></div>
-
+    <main style={{ minHeight: '100vh', background: '#f7f5ee' }}>
       <Navbar />
       <Hero />
       <About />
-      <Experience />
       <Skills />
       <Projects />
+      <Experience />
       <Contact />
     </main>
   );

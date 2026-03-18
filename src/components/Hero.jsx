@@ -234,7 +234,7 @@ export default function Hero() {
             <div style={{ display: 'flex', gap: '14px', marginTop: '32px', alignItems: 'center' }}>
               {/* GitHub */}
               <a
-                href="https://github.com"
+                href="https://github.com/pallavi-patel-developer"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
