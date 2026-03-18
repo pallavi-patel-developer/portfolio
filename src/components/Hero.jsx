@@ -152,6 +152,7 @@ export default function Hero() {
             margin-bottom: 16px;
           }
           @media (max-width: 768px) {
+            .hero-container { justify-content: center !important; }
             .hero-content {
               text-align: center;
               display: flex;
@@ -179,6 +180,7 @@ export default function Hero() {
         }}
       >
         <div
+          className="hero-container"
           style={{
             maxWidth: '1200px',
             margin: '0 auto',

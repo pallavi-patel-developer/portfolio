@@ -202,7 +202,7 @@ export default function Navbar() {
       <style>{`
         @media (max-width: 768px) {
           .hidden-mobile { display: none !important; }
-          .show-mobile { display: flex !important; }
+          .show-mobile { display: block !important; }
         }
         @media (min-width: 769px) {
           .show-mobile { display: none !important; }

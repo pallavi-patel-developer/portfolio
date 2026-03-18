@@ -16,6 +16,7 @@ export default function About() {
     >
       <style>{`
         @media (max-width: 768px) {
+          .about-container { justify-content: center !important; }
           .about-content {
             text-align: center;
             display: flex;
@@ -27,6 +28,7 @@ export default function About() {
         }
       `}</style>
       <div
+        className="about-container"
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
