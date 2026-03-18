@@ -3,6 +3,15 @@ import { useState } from 'react';
 
 const projects = [
   {
+    title: 'WTF - Where Food Begins',
+    description: 'A comprehensive restaurant platform featuring best-in-class UI for food menus, event bookings, and an engaging homepage.',
+    tech: ['Next.js', 'React', 'Tailwind'],
+    github: 'https://github.com/pallavi-patel-developer/wtf-website',
+    live: 'https://wtf-website-tan.vercel.app/',
+    bgColor: '#2E0A05',
+    collage: ['/wtf-1.png', '/wtf-2.png', '/wtf-3.png'],
+  },
+  {
     title: 'E-Commerce API',
     description: 'A scalable RESTful API for e-commerce platforms with authentication, product management, cart system, and payment gateway integration.',
     tech: ['Node.js', 'Express', 'MongoDB'],
@@ -185,14 +194,27 @@ export default function Projects() {
                   overflow: 'hidden',
                 }}
               >
-                <span style={{ fontSize: '5rem', opacity: 0.4 }}>{proj.emoji}</span>
-                {/* Decorative dots */}
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(26,46,26,0.08) 2px, transparent 0)',
-                  backgroundSize: '24px 24px',
-                }} />
+                {proj.collage ? (
+                  <div style={{ width: '100%', height: '100%', display: 'flex' }}>
+                    <div style={{ width: '60%', height: '100%' }}>
+                      <img src={proj.collage[0]} alt="Preview 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <div style={{ width: '40%', height: '100%', display: 'flex', flexDirection: 'column', borderLeft: '2px solid #fff' }}>
+                       <img src={proj.collage[1]} alt="Preview 2" style={{ width: '100%', height: '50%', objectFit: 'cover', borderBottom: '2px solid #fff' }} />
+                       <img src={proj.collage[2]} alt="Preview 3" style={{ width: '100%', height: '50%', objectFit: 'cover' }} />
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <span style={{ fontSize: '5rem', opacity: 0.4 }}>{proj.emoji}</span>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(26,46,26,0.08) 2px, transparent 0)',
+                      backgroundSize: '24px 24px',
+                    }} />
+                  </>
+                )}
               </div>
 
               {/* Info area */}
