@@ -12,6 +12,15 @@ const projects = [
     collage: ['/wtf-1.png', '/wtf-2.png', '/wtf-3.png'],
   },
   {
+    title: 'Multi-Tenant SaaS Super Panel',
+    description: 'A powerful SuperAdmin dashboard for managing multiple tenants, subscriptions, orders, and detailed revenue analytics.',
+    tech: ['Next.js', 'React', 'Tailwind', 'Chart.js'],
+    github: 'https://github.com/pallavi-patel-developer/multi-tenant-SaaS-super-panel',
+    live: 'https://multi-tenant-panel-saas.vercel.app',
+    bgColor: '#171821',
+    image: '/saas-1.png',
+  },
+  {
     title: 'E-Commerce API',
     description: 'A scalable RESTful API for e-commerce platforms with authentication, product management, cart system, and payment gateway integration.',
     tech: ['Node.js', 'Express', 'MongoDB'],
@@ -203,6 +212,10 @@ export default function Projects() {
                        <img src={proj.collage[1]} alt="Preview 2" style={{ width: '100%', height: '50%', objectFit: 'cover', borderBottom: '2px solid #fff' }} />
                        <img src={proj.collage[2]} alt="Preview 3" style={{ width: '100%', height: '50%', objectFit: 'cover' }} />
                     </div>
+                  </div>
+                ) : proj.image ? (
+                  <div style={{ width: '100%', height: '100%' }}>
+                    <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'left top' }} />
                   </div>
                 ) : (
                   <>
