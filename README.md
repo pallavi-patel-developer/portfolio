@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✨ Pallavi Patel — Developer Portfolio
+#  Pallavi Patel — Developer Portfolio
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
@@ -33,7 +33,7 @@
 
 ##  Live Demo
 
-> 🔗 **[View Live Portfolio →](#)** *https://portfolio-three-taupe-53.vercel.app/*
+>  **[View Live Portfolio →](#)** *https://portfolio-three-taupe-53.vercel.app/*
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Section | Highlights |
 |---------|-----------|
-| 🏠 **Hero** | Floating SVG tech logos (16+ icons) with CSS animations, GitHub & LinkedIn links, CV download button |
+|  **Hero** | Floating SVG tech logos (16+ icons) with CSS animations, GitHub & LinkedIn links, CV download button |
 | 👤 **About Me** | Personal introduction with "Read More" page navigation |
 | 💼 **Experience** | Animated vertical timeline with hover-glow effects, alternating left/right layout, tech pills |
 | 🛠️ **Skills** | 12 skill cards with real SVG logos, animated progress bars with brand colors, hover glow effects |
