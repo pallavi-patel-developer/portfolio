@@ -80,7 +80,7 @@ export default function Projects() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section id="projects" style={{ background: '#f7f5ee', padding: '80px 32px' }}>
+    <section id="projects" style={{ background: '#f7f5ee', padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         {/* Header */}
         <div
@@ -170,7 +170,7 @@ export default function Projects() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))',
             gap: '24px',
           }}
         >

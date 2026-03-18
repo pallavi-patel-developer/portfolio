@@ -28,7 +28,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(1); // second item open by default
 
   return (
-    <section id="faq" style={{ background: '#1a2e1a', padding: '80px 32px' }}>
+    <section id="faq" style={{ background: '#1a2e1a', padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)' }}>
       <div style={{ maxWidth: '700px', margin: '0 auto' }}>
         {/* Header */}
         <div

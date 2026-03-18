@@ -35,7 +35,7 @@ function Column({ title, items }) {
   return (
     <div
       style={{
-        flex: '1 1 300px',
+        flex: '1 1 min(100%, 300px)',
         background: '#fff',
         borderRadius: '20px',
         padding: '28px',
@@ -118,7 +118,7 @@ function Column({ title, items }) {
 
 export default function Experience() {
   return (
-    <section id="experience" style={{ background: '#f7f5ee', padding: '80px 32px' }}>
+    <section id="experience" style={{ background: '#f7f5ee', padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         {/* Section label */}
         <div

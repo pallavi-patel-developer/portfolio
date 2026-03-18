@@ -167,7 +167,7 @@ export default function Hero() {
           style={{
             maxWidth: '1200px',
             margin: '0 auto',
-            padding: '60px 32px 40px',
+            padding: 'clamp(40px, 8vw, 60px) clamp(16px, 5vw, 32px) 40px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -176,7 +176,7 @@ export default function Hero() {
           }}
         >
           {/* ── LEFT CONTENT ── */}
-          <div style={{ flex: '1 1 420px', minWidth: '280px' }}>
+          <div style={{ flex: '1 1 420px', minWidth: 'min(100%, 280px)' }}>
             {/* Greeting tag */}
             <div className="hero-greeting-tag">
               <span style={{ fontSize: '1rem' }}>👋</span>
@@ -186,7 +186,7 @@ export default function Hero() {
             {/* Main heading */}
             <h1
               style={{
-                fontSize: 'clamp(2.4rem, 5vw, 4rem)',
+                fontSize: 'clamp(1.8rem, 10vw, 4rem)',
                 fontWeight: 900,
                 lineHeight: 1.1,
                 color: '#1a1a1a',

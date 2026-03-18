@@ -73,7 +73,7 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" style={{ background: '#fff', padding: '80px 32px' }}>
+    <section id="contact" style={{ background: '#fff', padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)' }}>
       <div
         style={{
           maxWidth: '1100px',
@@ -85,7 +85,7 @@ export default function Contact() {
         }}
       >
         {/* ── LEFT: Info ── */}
-        <div style={{ flex: '0 1 320px', minWidth: '260px' }}>
+        <div style={{ flex: '0 1 320px', minWidth: 'min(100%, 260px)' }}>
           {/* Label */}
           <div
             style={{
@@ -172,9 +172,9 @@ export default function Contact() {
         </div>
 
         {/* ── RIGHT: Form ── */}
-        <form onSubmit={handleSubmit} style={{ flex: '1 1 380px', minWidth: '280px' }}>
+        <form onSubmit={handleSubmit} style={{ flex: '1 1 380px', minWidth: 'min(100%, 280px)' }}>
           {/* Row 1: name + email */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '14px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '14px', marginBottom: '14px' }}>
             <div>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#444', marginBottom: '6px' }}>
                 Your Name *
@@ -210,7 +210,7 @@ export default function Contact() {
           </div>
 
           {/* Row 2: phone + interest */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '14px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '14px', marginBottom: '14px' }}>
             <div>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#444', marginBottom: '6px' }}>
                 Phone *

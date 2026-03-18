@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav
       style={{
         background: '#f7f5ee',
-        padding: '16px 32px',
+        padding: '16px clamp(12px, 4vw, 32px)',
         position: 'sticky',
         top: 0,
         zIndex: 100,
@@ -118,6 +118,7 @@ export default function Navbar() {
         {/* Contact Button */}
         <a
           href="#contact"
+          className="hidden-mobile"
           style={{
             color: '#fff',
             border: '1.5px solid rgba(255,255,255,0.45)',
@@ -176,7 +177,7 @@ export default function Navbar() {
             boxShadow: '0 8px 32px rgba(26,46,26,0.3)',
           }}
         >
-          {navLinks.map((link) => (
+          {[...navLinks, { href: '#contact', label: 'Contact' }].map((link) => (
             <Link
               key={link.href + link.label}
               href={link.href}

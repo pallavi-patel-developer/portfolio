@@ -11,7 +11,7 @@ export default function About() {
       id="about"
       style={{
         background: '#1a2e1a',
-        padding: '80px 32px',
+        padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 32px)',
       }}
     >
       <div
@@ -29,7 +29,7 @@ export default function About() {
           style={{
             flex: '0 0 auto',
             position: 'relative',
-            width: 'clamp(240px, 35vw, 360px)',
+            width: 'clamp(min(100%, 200px), 35vw, 360px)',
           }}
         >
           {/* Yellow circle bg */}
@@ -88,7 +88,7 @@ export default function About() {
         </div>
 
         {/* ── RIGHT: Text ── */}
-        <div style={{ flex: '1 1 320px', color: '#fff' }}>
+        <div style={{ flex: '1 1 min(100%, 320px)', color: '#fff' }}>
           {/* Sub-label */}
           <div
             style={{
@@ -107,7 +107,7 @@ export default function About() {
 
           <h2
             style={{
-              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              fontSize: 'clamp(1.5rem, 8vw, 3rem)',
               fontWeight: 900,
               lineHeight: 1.1,
               marginBottom: '20px',
