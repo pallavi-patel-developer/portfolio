@@ -36,7 +36,7 @@ export default function Contact() {
           access_key: WEB3FORMS_KEY,
           name: formData.name,
           email: formData.email,
-          subject: `Interest: ${formData.interest}`,
+          subject: `PALLAVI GOT PROJECT ON: ${formData.interest}`,
           message: `Phone: ${formData.phone}\n\n${formData.message}`,
         }),
       });
