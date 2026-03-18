@@ -42,12 +42,12 @@
 | Section | Highlights |
 |---------|-----------|
 |  **Hero** | Floating SVG tech logos (16+ icons) with CSS animations, GitHub & LinkedIn links, CV download button |
-| 👤 **About Me** | Personal introduction with "Read More" page navigation |
-| 💼 **Experience** | Animated vertical timeline with hover-glow effects, alternating left/right layout, tech pills |
-| 🛠️ **Skills** | 12 skill cards with real SVG logos, animated progress bars with brand colors, hover glow effects |
-| 📂 **Projects** | Filterable project grid (All/Backend/Full Stack/DevOps), image previews with gradient fallbacks, hover overlays with GitHub & Live Demo links |
-| 📬 **Contact** | Interactive contact form with focus glow, info cards (email, location, website), social links with brand colors |
-| 🧭 **Navbar** | Clean navigation with smooth scroll anchors to all sections |
+|  **About Me** | Personal introduction with "Read More" page navigation |
+|  **Experience** | Animated vertical timeline with hover-glow effects, alternating left/right layout, tech pills |
+|  **Skills** | 12 skill cards with real SVG logos, animated progress bars with brand colors, hover glow effects |
+|  **Projects** | Filterable project grid (All/Backend/Full Stack/DevOps), image previews with gradient fallbacks, hover overlays with GitHub & Live Demo links |
+|  **Contact** | Interactive contact form with focus glow, info cards (email, location, website), social links with brand colors |
+|  **Navbar** | Clean navigation with smooth scroll anchors to all sections |
 
 ---
 
